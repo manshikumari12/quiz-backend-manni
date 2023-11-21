@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const { blackmodel } = require("../model/black.model");
-
+//dfsdfsdfdfsdfsdf
 const auth = async (req, res, next) => {
   let token = req.headers?.authorization;
   console.log(token);
