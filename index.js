@@ -19,7 +19,7 @@ app.get("/", (req,res) => {
 
 
 
-app.listen(process.env.port,async ()=>{
+app.listen("1114",async ()=>{
     try {
         await connection
         console.log("connected to data-base")
