@@ -5,13 +5,7 @@ var jwt = require("jsonwebtoken");
 
 const UserRouter = express.Router();
 
-// const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: "manshisbp@gmail.com",
-//       pass: "manshi@420",
-//     },
-//   });
+
 
 UserRouter.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
