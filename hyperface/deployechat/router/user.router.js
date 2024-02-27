@@ -158,7 +158,7 @@ userRouter.post("/login", async (req, res) => {
                             email: isUserPresent.email,
                             mobileNo: isUserPresent.mobileNo,
                             address: isUserPresent.address
-                        },       process.env.JWT_TOKEN, { expiresIn: '24h' });
+                        },    "manshi", { expiresIn: '24h' });
 
                         return res.status(200).send({
                             token: token,

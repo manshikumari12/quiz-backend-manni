@@ -1,13 +1,13 @@
 const express = require("express");
 const { connection } = require("./db");
 const { userRouter } = require("./router/user.router");
-require("dotenv").config();
+
 const { userAuthMiddleware } = require('./middleware/auth');
 const cookieParser = require('cookie-parser');
 const http = require('http');
 const fs = require('fs')
 const cors = require('cors')
-
+require("dotenv").config();
 
 const { Server } = require("socket.io");
 

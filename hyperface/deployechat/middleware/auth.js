@@ -6,9 +6,7 @@ const userAuthMiddleware = async (socket,  next) => {
         return next(new Error('Authentication failed. No token provided.'));
        
     }
-    jwt.verify(token,      process.env.JWT_TOKEN, (err, decoded) => {
-     console.log(process.env.JWT_TOKEN);
-
+    jwt.verify(token,    "manshi", (err, decoded) => {
         if (err) {
             socket.emit('authenticationFailed', { message: 'Invalid token' });
             return next(new Error('Authentication failed. Invalid token.'));
@@ -17,12 +15,12 @@ const userAuthMiddleware = async (socket,  next) => {
       
           socket.user = decoded.name;
         socket.email = decoded.email;
-        // console.log(socket.email)
+        console.log(socket.email)
 
         // socket.user = decoded.email;
         // console.log(socket.email)
         // console.log(decoded.email)
-        // console.log(socket.user)
+        console.log(socket.user)
         //  console.log( decoded.name)
         //    console.log('User authenticated:', socket.user);
         next();
